@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
-class QuickSort extends Products
+class QuickSort extends CalculateProducts
 		{ 
 			int partition(ArrayList<Integer> array, int a, int b) 
 			{ 
@@ -39,10 +40,17 @@ class QuickSort extends Products
  
 			public static void main(String args[]) 
 			{ 
-				int m = 5, n = 5;
-				int[][] inputArray = {{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15},{16,17,18,19,20},{21,22,23,24,25}};
-				Products object1 = new Products();
-				ArrayList<Integer> array = object1.returnArray(m, n, inputArray); 
+				Scanner scanner = new Scanner(System.in);
+				Matrix rawArray = new Matrix();
+				System.out.println("Nombre de lignes");
+				int m = scanner.nextInt();
+				System.out.println("Nombre de colonnes");
+				int n = scanner.nextInt();
+				scanner.close();
+				int[][] inputArray= rawArray.createMatrix(m, n);
+				
+				CalculateProducts matrix1 = new CalculateProducts();
+				ArrayList<Integer> array = matrix1.returnArray(m, n, inputArray); 
 				int l = array.size(); 
 
 				QuickSort object2 = new QuickSort(); 

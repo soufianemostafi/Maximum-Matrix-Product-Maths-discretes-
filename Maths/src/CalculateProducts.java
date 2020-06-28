@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Products {
+public class CalculateProducts extends Matrix{
 	public ArrayList<Integer> returnArray(int m, int n, int[][] inputArray){
 		ArrayList<Integer> productsArray = new ArrayList<Integer>(); 
 		int i = 0, j = 0;
@@ -36,5 +36,3 @@ public class Products {
 		return productsArray;
 	}
 }
-
-
